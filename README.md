@@ -21,3 +21,4 @@ References:
 
 * <http://www.w3.org/wiki/WebComponents/>
 * <http://webcomponents.org/resources/>
+* [Why You Should be Using Web Components Right Now. And How](https://www.youtube.com/watch?v=AvgS938i34s>)
