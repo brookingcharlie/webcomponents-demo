@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Custom Elements example</title>
+    <link rel="stylesheet" href="hello-world.css" />
+  </head>
+  <body>
+    <hello-world message="I'm from a tag."></hello-world>
+    <script src="hello-world.js"></script>
+    <script>
+      var helloAgain = document.createElement("hello-world");
+      helloAgain.setAttribute("message", "I'm from a constructor.");
+      document.body.appendChild(helloAgain);
+    </script>
+  </body>
+</html>
