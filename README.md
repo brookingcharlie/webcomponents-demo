@@ -7,6 +7,16 @@ Code examples showing usage of Web Components standards:
 * HTML Imports (no demo yet)
 * HTML Templates (no demo yet)
 
+Browser support (as of August 2015):
+
+* Works in Chrome/Chromium (should also work in Opera and other WebKit-based browsers).
+* Works with a configuration change in Firefox
+  (see <https://developer.mozilla.org/en-US/docs/Web/Web_Components>).
+* For polyfills to workaround lack of browser support, see
+  <http://webcomponents.org/polyfills/>.
+* For an overview of browser implementation progress, see
+  <https://jonrimmer.github.io/are-we-componentized-yet/>.
+
 References:
 
 * <http://www.w3.org/wiki/WebComponents/>
