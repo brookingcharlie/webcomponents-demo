@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <title>Shadow DOM example</title>
+    <style>
+      h1 { font-style: italic; }
+    </style>
   </head>
   <body>
+    <h1>Shadow DOM example</h1>
     <div id="hello-world"></div>
+    <h2>Observations</h2>
+    <ul>
+      <li>Document's <code>h1</code> style (italics) doesn't apply to <code>h1</code> in Shadow DOM.</li>
+      <li><code>document.getElementsByTagName('h1').length == 1</code> as it doesn't include Shadow DOM.</li>
+    </ul>
     <script src="hello-world.js"></script>
     <script>
-      createHelloWorld("#hello-world", "I'm in a shadown DOM.");
+      createHelloWorld("#hello-world", "I'm in a shadow DOM.");
     </script>
   </body>
 </html>
