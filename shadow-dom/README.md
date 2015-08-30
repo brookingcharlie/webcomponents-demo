@@ -8,10 +8,10 @@ Shadow DOM supports the encapsulation of node trees representing components.
 With Shadow DOM, any element in a node tree can host a *shadow tree*, which
 has its own *shadow root* as opposed to descending from the document node.
 Without this encapsulation, styles and scripts intended for other parts of
-the document could impact upon the component, particularly givent that element
+the document could impact upon the component, particularly given that element
 IDs and class names can clash.
 
-References:
+## References
 
 * <http://w3c.github.io/webcomponents/spec/shadow/>
 * <http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/>
