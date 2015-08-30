@@ -13,12 +13,11 @@ As of August 2015:
 
 * Works in Chrome/Chromium and should also work other WebKit-based browsers, e.g. Opera.
 * You need to make a configuration change in Firefox
-  (see <https://developer.mozilla.org/en-US/docs/Web/Web_Components>).
-* For polyfills to workaround lack of browser support, see
-  <http://webcomponents.org/polyfills/>.
+  (see [https://developer.mozilla.org/en-US/docs/Web/Web_Components](this MDN article)).
+* To workaround lack of support in other browsers, see <http://webcomponents.org/polyfills/>.
 
 For an overview of browser implementation progress, see
-<https://jonrimmer.github.io/are-we-componentized-yet/>.
+[https://jonrimmer.github.io/are-we-componentized-yet/](Are We Componentized Yet?).
 
 ## References
 
