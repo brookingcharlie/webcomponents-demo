@@ -19,13 +19,12 @@
         prototype: Object.create(HTMLElement.prototype, {
           createdCallback: {
             value: function() {
-              var shadowRoot = this.createShadowRoot();
               var message = this.getAttribute("message");
               var importedDocument = document.querySelector('link[rel=import]').import;
               var template = importedDocument.querySelector("#hello-world-template");
               template.content.querySelector(".message").textContent = message;
               var importedNode = document.importNode(template.content, true);
-              shadowRoot.appendChild(importedNode);
+              this.createShadowRoot().appendChild(importedNode);
             }
           }
         })
