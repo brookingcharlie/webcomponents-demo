@@ -2,10 +2,10 @@
 
 Code examples showing usage of Web Components standards:
 
-* [Custom Elements](custom-elements/)
-* [Shadow DOM](shadow-dom/)
-* [HTML Templates](templates/)
-* [HTML Imports](imports/)
+* [Custom Elements](custom-elements/) (link to demo)
+* [Shadow DOM](shadow-dom/) (link to demo)
+* [HTML Templates](templates/) (link to demo)
+* [HTML Imports](imports/) (link to demo)
 
 ## Browser support
 
