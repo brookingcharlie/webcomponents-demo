@@ -1,7 +1,7 @@
 # HTML Imports demo
 
 Example showing usage of HTML Imports - including use of
-[Custom Elements](../custom-elements/)),
+[Custom Elements](../custom-elements/),
 [Shadow DOM](../shadow-dom/), and
 [HTML Templates](../templates/).
 
