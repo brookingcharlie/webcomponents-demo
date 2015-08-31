@@ -3,20 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <title>Shadow DOM example</title>
-    <style>
-      h1 { font-style: italic; }
-    </style>
   </head>
   <body>
     <h1>Shadow DOM example</h1>
     <div id="hello-world"></div>
-    <h2>Observations</h2>
-    <ul>
-      <li>Document's <code>h1</code> style (italics) doesn't apply to <code>h1</code> in Shadow DOM.</li>
-      <li><code>document.getElementsByTagName('h1').length == 1</code> as it doesn't include Shadow DOM.</li>
-    </ul>
     <script src="hello-world.js"></script>
     <script>
+      function createHelloWorld(selector, message) {
+        var shadowHost = document.querySelector(selector);
+        var shadowRoot = shadowHost.createShadowRoot();
+
+        var style = document.createElement("style");
+        style.textContent =
+          ".hello-world { display: block; margin: 10px 0; }\n" +
+          ".hello-world * { margin: 0; padding: 10px; font-family: sans-serif; }\n" +
+          ".hello-world h1 { color: #FFF; background-color: #45B; }\n" +
+          ".hello-world p.message { color: #666; background-color: #EEE; }"
+        shadowRoot.appendChild(style);
+
+        var shadowNode = document.createElement("div");
+        shadowNode.className = "hello-world";
+
+        var headingElement = document.createElement("h1");
+        headingElement.appendChild(new Text("Hello"));
+        shadowNode.appendChild(headingElement);
+
+        var messageElement = document.createElement("p");
+        messageElement.className = "message";
+        messageElement.textContent = message;
+        shadowNode.appendChild(messageElement);
+
+        shadowRoot.appendChild(shadowNode);
+      }
       createHelloWorld("#hello-world", "I'm in a shadow DOM.");
     </script>
   </body>
