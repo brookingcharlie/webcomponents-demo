@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Templates example</title>
+  </head>
+  <body>
+    <h1>HTML Templates example</h1>
+    <template id="hello-world-template">
+      <style>
+        .hello-world { display: block; margin: 10px 0; }
+        .hello-world * { margin: 0; padding: 10px; font-family: sans-serif; }
+        .hello-world h1 { color: #FFF; background-color: #45B; }
+        .hello-world p.message { color: #666; background-color: #EEE; }
+      </style>
+      <div class="hello-world">
+        <h1>Hello</h1>
+        <p class="message"></p>
+      </div>
+    </template>
+    <script>
+      function createHelloWorld(message) {
+        var template = document.querySelector("#hello-world-template");
+        template.content.querySelector(".message").textContent = message;
+        var importedNode = document.importNode(template.content, true);
+        document.body.appendChild(importedNode);
+      }
+      createHelloWorld("I'm from a template!");
+      createHelloWorld("I'm from a template too!");
+    </script>
+  </body>
+</html>
