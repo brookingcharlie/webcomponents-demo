@@ -1,2 +1,35 @@
-<link rel="stylesheet" href="hello-world.css" />
-<script src="hello-world.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body>
+    <template id="hello-world-template">
+      <style>
+        .hello-world { display: block; margin: 10px 0; }
+        .hello-world * { margin: 0; padding: 10px; font-family: sans-serif; }
+        .hello-world h1 { color: #FFF; background-color: #45B; }
+        .hello-world p.message { color: #666; background-color: #EEE; }
+      </style>
+      <div class="hello-world">
+        <h1>Hello</h1>
+        <p class="message"></p>
+      </div>
+    </template>
+    <script>
+      document.registerElement("hello-world", {
+        prototype: Object.create(HTMLElement.prototype, {
+          createdCallback: {
+            value: function() {
+              var shadowRoot = this.createShadowRoot();
+              var message = this.getAttribute("message");
+              var importedDocument = document.querySelector('link[rel=import]').import;
+              var template = importedDocument.querySelector("#hello-world-template");
+              template.content.querySelector(".message").textContent = message;
+              var importedNode = document.importNode(template.content, true);
+              shadowRoot.appendChild(importedNode);
+            }
+          }
+        })
+      });
+    </script>
+  </body>
+</html>
